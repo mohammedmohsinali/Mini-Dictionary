@@ -3,6 +3,9 @@ from difflib import get_close_matches
 data = json.load(open("076 data.json"))
 
 def translate(word):
+    #word = word.lower()
+    if word in data:
+        return data[word]
     word = word.lower()
     if word in data:
         return data[word]
